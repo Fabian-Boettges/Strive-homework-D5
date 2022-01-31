@@ -92,7 +92,21 @@ console.log(strivify(" hello"))
  HINT: Modulus Operator
 */
 
+const check3and7 = function(someNumber) {
+    if (someNumber < 0) {
+        return "Number must be higher than 0"
+    } else if (someNumber % 3 === 0 && someNumber % 7 === 0) {
+        return `${someNumber} is both a multiple of 3 and 7`
+    } else if (someNumber % 3 === 0) {
+        return `${someNumber} is multiple of 3`
+    } else if (someNumber % 7 === 0 ) {
+        return `${someNumber} is a multiple of 7`
+    } else {
+        return `${someNumber} is not a multiple of either 3 or 7`
+    }
+}
 
+console.log(check3and7(14))
 
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
